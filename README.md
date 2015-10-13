@@ -13,17 +13,17 @@ in the "essay". Recursively call essayCreation if count hasn't reached the
 end of the essay or print out the essay and output it to a file if so.
 
 ### Parameters
-essay (std::string&)	Referece to the essay being written on
-o (std::ofstream&)	Reference to output stream
-ab (std::string)	Alphabet
-abSize (int)		Size of Alphabet
-count (int)		Current character in "essay"
-tC (int&)		Total number of "essays" created
-eS (int)		Size of "essay"
+* essay (std::string&)	Referece to the essay being written on
+* o (std::ofstream&)	Reference to output stream
+* ab (std::string)	Alphabet
+* abSize (int)		Size of Alphabet
+* count (int)		Current character in "essay"
+* tC (int&)		Total number of "essays" created
+* eS (int)		Size of "essay"
 
 ### Returns: Nothing
 
 ## Special Thanks for Algorithm
-Professor Michael Shindler
-Stephen Sher
-Colin Cammarano
+* Professor Michael Shindler
+* Stephen Sher
+* Colin Cammarano
