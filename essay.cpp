@@ -6,6 +6,10 @@
 	Write a program that will output every single possible
 	"essay" of size n (input by user) with a certain alphabet
 	(also input by user)
+
+	Output is through the console. If you would like to output through a file,
+	uncomment and comment out the appropriate lines. The file is by default
+	titled "output.txt", but can obviously be changed.
 */
 
 #include <iostream>
@@ -28,21 +32,23 @@
 		eS (int)				Size of "essay"
 	Returns: Nothing
 */
-void essayCreation(std::string& essay, std::ofstream& o, std::string ab, int abSize, int count, int& tC, int eS) {
+//void essayCreation(std::string& essay, std::ofstream& o, std::string ab, int abSize, int count, int& tC, int eS) {
+void essayCreation(std::string& essay, std::string ab, int abSize, int count, int& tC, int eS) {
 	// Loop through alphabet
 	for (int i = 0; i < abSize; i++) {
 		// Replace character in position count with alphabet character
 		essay[count] = ab[i];
 		// Print "essay" if at the end of it 
 		if (count >= eS-1) {
-			o << essay << std::endl;
+			//o << essay << std::endl;
 			std::cout << essay << std::endl;
 			// Increment total count of "essays"
 			tC++;
 		}
 		else {
 			// Recursive call
-			essayCreation(essay, o, ab, abSize, count+1, tC, eS);
+			//essayCreation(essay, o, ab, abSize, count+1, tC, eS);
+			essayCreation(essay, ab, abSize, count + 1, tC, eS);
 		}
 	}
 }
@@ -66,17 +72,18 @@ int main() {
 	essay.resize(essaySize);
 
 	// File output
-	std::ofstream output;
-	output.open("output.txt");
+	//std::ofstream output;
+	//output.open("output.txt");
 	
 	// Call creation function
-	essayCreation(essay, output, alphabet, alphabet.length(), 0, totalCnt, essaySize);
+	//essayCreation(essay, output, alphabet, alphabet.length(), 0, totalCnt, essaySize);
+	essayCreation(essay, alphabet, alphabet.length(), 0, totalCnt, essaySize);
 
 	// Output total number of "essays" generated
 	std::cout << std::endl << "We have a total of " << totalCnt << " \"essays\"." << std::endl;
-	output << std::endl << "We have a total of " << totalCnt << " \"essays\"." << std::endl;
+	//output << std::endl << "We have a total of " << totalCnt << " \"essays\"." << std::endl;
 
 	// Close file and end program
-	output.close();
+	//output.close();
 	return 0;
 }
