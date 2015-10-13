@@ -7,6 +7,15 @@ Jesus Garcia (jeg1394@gmail.com)
 ## Instructions
 Write a program that will output every single possible "essay" of size n (input by user) with a certain alphabet (also input by user)
 
+## Input
+* Size of the "essays"
+* Alphabet (ex: "abcdef")
+
+## Output
+* All essays generated
+* Number of essays generated
+**NOTE: Output is shown through console and a new file titled "output.txt".**
+
 ## Function: essayCreation
 Loops through the alphabet and changes the value of the count element
 in the "essay". Recursively call essayCreation if count hasn't reached the
