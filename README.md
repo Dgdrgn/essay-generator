@@ -14,6 +14,7 @@ Write a program that will output every single possible "essay" of size n (input 
 ## Output
 * All essays generated
 * Number of essays generated
+
 **NOTE: Output is shown through console and a new file titled "output.txt".**
 
 ## Function: essayCreation
