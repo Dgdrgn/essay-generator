@@ -21,7 +21,8 @@ end of the essay or print out the essay and output it to a file if so.
 * tC (int&)		Total number of "essays" created
 * eS (int)		Size of "essay"
 
-### Returns: Nothing
+### Returns
+* Nothing
 
 ## Special Thanks for Algorithm
 * Professor Michael Shindler
